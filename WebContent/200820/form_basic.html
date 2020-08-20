@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form_basic</title>
+	</head>
+	<body>
+	
+<!-- 	
+	반드시 form태그가 존재해야지만 action page로 이동이 가능하다
+	action page로 이동 시에 form의 데이터 값들을 가지고 이동한다.
+
+	method = "post" / 보안이 향상됨(파라미터들이 URL에 보이지 않음) **되도록이면 post사용
+	method = "get"	/ 보안에 취약(파라미터들이 URL에 그대로 노출)	노출되어도 상관 없는 경우는 get을 더 많이 씀
+	
+	radio버튼의 경우에는 name값을 동일하게 써주어야지만 다중선택이 되지 않는다.
+	
+	checkbox의 경우에는 name값을 작성해도 다중선택이 가능하다.
+	checked는 브라우저를 로딩할 때 첫 화면에서 체크가 되어있게 하는 속성이다.
+	
+	select는 유일하게 input type으로 시작하지 않는다!! 주의~!
+	안에 내용은 <option></option>으로 표기하며 
+	value를 생략할 경우 option내에 있는 텍스트가 데이터로 전달된다.
+	
+	input type="button"의 경우는 클릭 시 해당 페이지에 머물러 있지만
+	<button>의 경우에는 submit과 동일하게 action페이지로 이동한다.
+	
+	 -->
+	
+	<!-- get, post -->
+		<form action="result.html" method="post">
+		<!-- 
+			name : 이름 지정 -->
+			아이디 : <input type="text" name="name"><br>
+			비밀번호 : <input type="password" name="pwd"><br>
+			<hr>
+			<!-- 
+			이름을 똑같이 지정해서 둘 중 하나만 선택할 수 있게 하기
+			셀렉트랑 라디오는 반드시 벨류값 -->
+			<input type="radio" name="gender" value="male">남성<br>
+			<input type="radio" name="gender" value="fmale">여성<br>
+			
+			
+			<hr>
+			취미를 입력해주세요
+			<input type="checkbox" name="hobby" value="training" checked>덕질
+			<input type="checkbox" name="hobby" value="movic">눕방
+			<input type="checkbox" name="hobby" value="music">먹방
+			<br><br>
+			
+			<hr>
+			생년월일<br>
+			<select name="year">
+				<option value="2020">2020년</option>
+				<option>2019년</option>
+				<option>2018년</option>
+				<option>2017년</option>
+				<option>2016년</option>
+				<option>2015년</option>
+			</select>년
+			<select name="month">
+				<option>1월</option>
+				<option>2월</option>
+				<option>3월</option>
+				<option>4월</option>
+				<option>5월</option>
+				<option>6월</option>
+			</select>월
+			<select name="day">
+				<option>1일</option>
+				<option>2일</option>
+				<option>3일</option>
+				<option>4일</option>
+				<option>5일</option>
+				<option>6일</option>
+			</select>일
+			
+			<hr>
+			이메일
+			<input type="text" name="emailAddress">@<input type="text" name="domain">
+			<br>
+			버튼
+			<!-- 
+			페이지에 머무름 -->
+			<input type="button" value="버튼입니다" onclick="alert('버튼이 눌렸습니다.');"> 
+			<!-- 
+			액션페이지로 넘어감 -->
+			<button>두번째 버튼입니다.</button>
+			<br>
+			<input type="submit" value="회원가입">
+		</form>
+	</body>
+	
+	
+</html>

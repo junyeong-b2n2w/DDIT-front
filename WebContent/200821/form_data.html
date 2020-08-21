@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form_data</title>
+	</head>
+	<body>
+		
+		<form>
+		<input type="reset" value="초기화" style="cursor:pointer;">
+		
+		<input type="image" src="../img/btn.png" style="width:100px">
+		
+		
+		<hr>
+		
+		<input type="file" accept="image/jpeg">
+		
+		<hr>
+		
+		<textarea cols="20" rows="20"></textarea>
+		
+		<hr>
+		
+		<input type="url" name="url">
+		<input type="email" name="email">
+		<input type="tel" name="tel">
+		<input type="color" name="color">
+		<input type="date" name="date">
+		<input type="week" name="week">
+		<input type="number" name="number" min="1" max="10">
+		<input type="range" name="range" min="1" max="10">
+		
+		</form>
+		
+		<hr>
+		<fieldset>
+			<legend>인적사항 입력</legend>
+				이름 : <input type="text" name="name" autocomplete="off" placeholder="이름을 작성해 주세요">
+				전화번호 : <input type="text" name="tel" autofocus value="010-1234-1234" readonly>
+		</fieldset>
+		<hr>
+		<label for="male">lable남성</label> <input type="radio" name="gender" value="male" id="male">남성
+		<label for="female">lable여성</label><input type="radio" name="gender" value="female" id="female">여성
+		
+		<hr>
+		<form>
+		<input type="text" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+		<input type="submit" value="확인">
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>join</title>
+		<style>
+			input[type=text],input[type=password]{width:400px;height:20px;}
+			td:first-child{text-align:center; font-weight:bold;}
+			input[type=button]{    color: #FFF;
+    background: #042f6c;
+			border: 1px solid #3d7cc3;
+    color: #3d7cc3;
+    background: #FFF;
+    font-size: 16px;}
+    		input[type=submit]{border: 1px solid #042f6c;
+    font-size: 20px;color:#FFF ;
+    background:#3d7cc3 ;
+    }
+    table{
+     border-collapse: collapse;}
+     p{color:#A500CF; font-size:10pt;}
+		</style>
+		
+	</head>
+	<body>
+	
+	<div style="width: 800px; margin:0 auto;">
+	
+	
+	<img alt="ebs" src="../img/logo.png" style="vertical-align: middle;"> <span style="vertical-align: middle;"><b>회원가입</b></span>
+	<hr style ="border :1px solid blue;"><!-- 실선은 solid -->
+	
+	<h2><img alt="정보입력" src="../img/icon.png">정보입력 및 본인 확인</h2>
+	<form action="result.html" method="post">
+	<table border="1" width="800">
+		<tr>
+			<td> 아이디 </td>
+			<td><input type="text" name="id"> <input type="button" value="중복확인" onclick="alert('중복 확인이 되었습니다');"></td>
+			
+		</tr>
+	
+		<tr>
+	 		<td>비밀번호</td>
+			<td><input type="password" name="pass"></td>
+		</tr>
+		
+		
+		<tr>
+		  <td>비밀번호 확인</td>
+		  <td><input type="password" name="checkpass"></td>
+		</tr>
+		
+		<tr>
+		 <td>이름</td>
+		 <td> <input type="text" name="name"></td>
+		</tr>
+		
+		<tr>
+	     <td>성별</td>
+		 <td><input type="radio"  name="gender" value="male"> 남자
+		 <input type="radio"  name="gender" value="fmale"> 여자
+		 <input type="checkbox" name="genderchack">선택정보(성별) 수집 및 이용 동의
+		 </td>
+		</tr>		
+		
+		<tr>
+		<td>생년월일</td>
+		  <td>
+		  <select name="year">
+		  <option>2020년</option>
+		  <option>2019년</option>
+		  <option>2018년</option>
+		  <option>2017년</option>
+		  <option>2016년</option>
+		  <option>2015년</option>
+		  </select>
+		
+		 <select name="month">
+		  <option>1월</option>
+		  <option>2월</option>
+		  <option>3월</option>
+		  <option>4월</option>
+		  <option>5월</option>
+		  <option>6월</option>
+		</select>
+		
+		<select name="day">
+		  <option>1일</option>
+		  <option>2일</option>
+		  <option>3일</option>
+		  <option>4일</option>
+		  <option>5일</option>
+		  <option>6일</option>
+		</select>
+		</td>
+		
+		<tr>
+		<td>이메일</td>
+		<td><input type="text" name="email" style="width:200px"> @ <input type="text" name="domain" style="width:200px"><br>
+		<p><b>아이디나 비밀번호를 찾기 위해 사용되오니 정확한 정보로 입력하시기 바랍니다</b></p>
+		</td>
+	
+		</tr>
+		
+		<tr>
+		<td>휴대폰</td>
+		<td><input type="text" name="tel" style="width:200px"> <input type="checkbox" name="telchack">선택정보(휴대폰) 수집 및 정보 이용 동의
+		<p><b>아이디나 비밀번호를 찾기 위해 사용되오니 정확한 정보로 입력하시기 바랍니다</b></p>
+		</td>
+		</tr>
+		
+		<tr>
+		<td>인증방법</td>
+		<td><input type="radio"  name="select" value="phone">휴대폰 <input type="radio"  name="select" value="emails">이메일
+		<input type="button" value="인증" onclick="alert('인증 되었습니다');"></td>
+	
+		</tr>
+		
+		
+		<tr>
+		 <td>인증 번호</td>
+		 <td><input type="text" name="num"> <input type="button" value="인증" onclick="alert('인증 되었습니다');"> 
+		  
+		 </td>
+		</tr>
+	
+	</table>
+
+	 </div>
+	 <br><br>
+	 
+	 <div style ="text-align: center;">
+	 <input type="submit" value="회원가입" >
+	 	 </form>
+	 </div>
+	 
+	 
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+	
+	
+	<style>
+	span{
+	background : #EEEEEE;
+	width:50%;
+	height:40px;
+	display:inline-block;
+	}
+	p{
+	background: pink;
+	width:50%;
+	height:40px;
+	}
+	.box #result1 {
+	display : none;
+	}
+	</style>
+	
+	<script>
+	
+	window.onload = function(){
+		
+		result = document.querySelector('#result1');
+		span1 = document.querySelector('span');
+		p1 = document.querySelector('p');
+	}
+	
+	function proc1(){
+		
+		result.style.display = 'block';
+		
+		
+		
+		span1.style.display='none';
+		p1.style.display='none';
+			
+		console.log(p1);
+	}
+	
+	function proc2(){
+		
+		result.style.display = 'none';
+		
+		
+		
+		span1.style.display='block';
+		p1.style.display='block';
+	}
+	
+	</script>
+	</head>
+	
+	<body>
+		<h3> </h3>
+		<div class="box">
+			<h3>display</h3>
+			display : none  / block / inline / inline-block<br>
+			확인버튼을 클릭하면 div id=result1인 요소를 보이게 하고
+			span과 p를 보이지 않게 한다.
+			<input type="button" value="확인" onclick="proc1()">
+			<input type="button" value="확인2" onclick="proc2()">
+			<span>무궁화 꽃이 피었습니다</span>
+			<p>무궁화 꽃이 피었습니다</p>
+			<div id="result1"> </div>
+		</div>
+		
+		
+	</body>
+</html>

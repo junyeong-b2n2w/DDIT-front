@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<style type="text/css">
+		
+		.box div {
+			width : 200px;
+			height:100px;
+			margin : 50px;
+			padding : 20px;
+			border :2px solid orange;
+		}
+		
+		#res2{
+			position : relative;
+			top : 100px;
+			
+		}
+		
+		#res3{
+			position : absolute;
+			top:100px;
+			left : 300px;
+			}
+		
+		#fixed{
+			position : fixed;
+			right : 100px;
+			top : 500px;
+		}
+		
+		</style>
+	
+	</head>
+	<body>
+		<h3> </h3>
+		<div class="box">
+			<h3>위치설정</h3>
+			정상적인흐름에 의한 배치
+			<div>box1</div>
+			<div>box2</div>
+			<div id="fixed">box3<br>
+			position : fixed;<br>
+			right : 100px;<br>
+			top : 500px;<br></div>
+			<div>box4</div>
+			
+			<hr>
+			
+			<div id="res1">res1</div>
+			<div id="res2">res2<br>
+				position : relative;<br>
+			top : 100px;<br>
+			</div>
+			<div id="res3">res3<br>
+			position : absolute;<br>
+			top:100px;<br>
+			left : 300px;<br>
+			</div>
+			<div id="res4">res4</div>
+			<div id="res5">res5</div>
+			<div id="res6">res6</div>
+			<div id="res7">res7</div>
+			<div id="res8">res8</div>
+		</div>
+		
+		
+		<pre>
+			정적위치 : 정상적인 흐름에 따라서 배치된다
+			상대위치 : 정상적인 흐름의 위치에서 변경한다 
+			절대위치 : 윈도우 컨테이너의 시작점 에서 위치를 변경한다 
+			고정위치 : 윈도우 컨테이너의 시적점에서 위치를 고정한다.
+		</pre>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<style>
+		.box div{
+		width : 150px;
+		height: 150px;
+		margin : 5px;
+		position : absolute;
+		}
+		
+		#d1{
+		background : blue;
+		top : 300px;
+		left:100px;
+		z-index:100;
+		}
+		#d2{
+		background : yellow;
+		top: 350px;
+		left:150px;
+		z-index:110;
+		
+		}
+		#d3{
+		background : green;
+		top:400px;
+		left:200px;
+		}
+		
+		</style>
+		
+	</head>
+	<body>
+		<h3> </h3>
+		<div class="box">
+			<h3>z-index</h3>
+			각 요소들이 위치에 의해 겹쳐 있을때 보여지는 순서를 정한다
+			z-index 0 을 기준으로 클수록 위로 올라온다
+			<input type="button" value="확인">
+			<div id="d1"> </div>
+			<div id="d2"> </div>
+			<div id="d3"> </div>
+		</div>
+		
+		
+	</body>
+</html>

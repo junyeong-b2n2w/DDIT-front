@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+.header{
+	height : 80px;
+	
+	text-align : center;
+	
+
+	
+}
+
+.header h1{
+	margin-top:25px;
+	padding: 10px 40px;
+	border: 4px solid black;
+	border-width: 4px 0px;
+	margin-bottom: 10px;
+}
+.nav{
+	height : 40px;
+	
+	border-bottom: 1px soild black;
+	
+	
+	
+	
+}
+.nav ul{
+	margin-top:0px;
+	text-align: center;
+}
+.nav li{
+	display:inline-block;
+	list-style: none;
+	margin-right: 30px;
+	padding : 5px;
+}
+.nav li:hover{
+	background: lightgray;
+}
+
+.clearfix::before{
+	content:"";
+	
+}
+.aside{
+	height : 500px;
+	border : 1px solid green;
+}
+
+
+
+.aside_left{
+	width: calc(25% - 1%);
+	float : left;
+	text-align: center;	
+}
+
+.aside_left ul{
+	list-style: none;
+	padding-left: 0px;
+}
+.aside_left li{
+	margin-top:5px;
+	padding: 10px;
+	padding-left: 30px;
+	
+	text-align: left;
+	background: lightgray;
+}
+
+.aside_right{
+	width: calc(25% - 1%);
+	float : right;
+	text-align: center;	
+}
+
+
+.aside_right .right_shopping{
+	text-align: left;
+	margin: 5px;	
+}
+
+.aside_right .login{
+	text-align: left;
+	margin: 5px;
+}
+
+
+
+.section{
+	height:500px;
+	float:left;
+	width: calc(50% - 1%);
+	border : 1px solid pink;
+}
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block; /* or `table` */
+}
+.footer{
+	height : 100px;
+	text-align: center;
+
+	
+	border: 1px solid blue;
+}

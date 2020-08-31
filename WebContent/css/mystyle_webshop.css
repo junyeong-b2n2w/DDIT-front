@@ -1,5 +1,12 @@
 @CHARSET "UTF-8";
 
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body lang(en){
+	font-family: 'Roboto', sans-serif;
+}
+
 .header{
 	height : 80px;
 	
@@ -21,6 +28,7 @@
 	
 	border-bottom: 1px soild black;
 	
+	word-spacing: 5px;
 	
 	
 	
@@ -37,6 +45,10 @@
 }
 .nav li:hover{
 	background: lightgray;
+}
+.nav a{
+	text-decoration: none;
+	color : black;
 }
 
 .clearfix::before{
@@ -56,6 +68,8 @@
 	text-align: center;	
 }
 
+
+
 .aside_left ul{
 	list-style: none;
 	padding-left: 0px;
@@ -67,6 +81,10 @@
 	
 	text-align: left;
 	background: lightgray;
+}
+
+.aside_left li:hover{
+	background: gray;
 }
 
 .aside_right{
@@ -82,20 +100,33 @@
 }
 
 .aside_right .login{
-	text-align: left;
+	text-align: center;
 	margin: 5px;
 }
 
+.aside_left a{
+	text-decoration: none;
+	color : black;
+}
 
+
+.aside_right a{
+	text-decoration: none;
+	color : blue;
+}
 
 .section{
 	height:500px;
 	float:left;
-	width: calc(50% - 1%);
-	border : 1px solid pink;
+	width: calc(50%);
+	
 }
 
-
+.section iframe{
+	height: 500px;
+	width: 100%;
+	border : none;
+}
 
 .clearfix::after {
   content: "";
@@ -107,5 +138,54 @@
 	text-align: center;
 
 	
-	border: 1px solid blue;
+	
+	
+	
+}
+
+.footer h6{
+	margin-top:25px;
+	padding: 10px 40px;
+	border: 2px solid black;
+	border-width: 4px 0px;
+	margin-bottom: 10px;
+}
+
+.button{
+	border-radius : 5px;
+	background:gray;
+	color : white;
+	width: 80px;
+	height :30px;
+	font-size: 20px;
+}
+.button_mid{
+	font-size : 16px;
+}
+
+.button:hover{
+	background:lightgray;
+	color : gray;
+}
+
+.container{
+	text-align: center;
+}
+
+.main_img img{
+	display : inline-block;
+	width:450px;
+	
+}
+
+.item{
+	border: 1px solid black;
+	padding : 10px;
+	display : inline-block;
+	text-align: center;
+}
+.item img{
+	weight:300px;
+	height: 200px;
+	
 }

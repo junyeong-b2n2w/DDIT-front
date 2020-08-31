@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+		function calc(){
+			let x = document.querySelector('#x').value;
+			let y = document.querySelector('#y').value;
+			let sum = parseInt(x) + parseInt(y);
+			
+			
+			document.querySelector('#result').value = sum;
+// 			let result = document.querySelector('#result');
+// 			result.innerTEXT = sum;
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		<form>
+		input 요소의 값을 script에서 사용 (get, set) : value
+		
+		<hr>
+		첫번째 입력 : 
+			<input type="text" id="x"><br>
+		두번째 입력 : 
+			<input type="text" id="y"><br>
+		<input type="button" value="계산" onclick="calc()"><br>
+		결과 : <input type="text" id="result"><br>
+		</form>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<style>
+		#test{
+			color:red;
+		}
+		</style>
+		
+		<script type="text/javascript">
+		
+		function proc1(){
+			let test = document.querySelector('#test');
+			vr = Math.floor(Math.random() * 256);
+			vg = Math.floor(Math.random() * 256);
+			vb = Math.floor(Math.random() * 256);
+			
+			vr16 = vr.toString(16);
+			vg16 = vg.toString(16);
+			vb16 = vb.toString(16);
+			
+			console.log(vr + ',' + vg + ',' + vb);
+			console.log(vr16 + ',' + vg16 + ',' + vb16);
+			
+// 			test.style.color = 'rgb(' + vr + ',' + vg + ',' + vb + ')';
+			
+			test.style.color = '#' + vr16 + vg16 + vb16;
+			
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>스타일 변경</h3>
+			버튼을 클릭하면 id가 test인 요소의 글자색을 변경 <br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1">
+			<h1 id="test">Hello</h1>
+		
+			
+			 </div>
+		</div>
+		
+		
+	</body>
+</html>

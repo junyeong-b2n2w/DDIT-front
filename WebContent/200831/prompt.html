@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script type="text/javascript">
+		function proc1(){
+			
+			
+			var value1 = prompt("정수 입력하세요1", "1~100사이");
+			var value2 = prompt("정수 입력하세요2", "1~100사이");
+			
+			sumstr = value1 + value2;
+			sum = parseInt(value1) + parseInt(value2);
+			
+			vr1 = document.querySelector('#result1');
+			vr1.innerHTML = "입력 1 : " + value1 + "<br>";
+			vr1.innerHTML += "입력 2 : " + value2 + "<br>";
+			vr1.innerHTML += "결과 : " + sumstr + "<br>";
+			vr1.innerHTML += "결과 : " + sum + "<br>";
+		}
+		</script>
+	
+	</head>
+	<body>
+		<div class="box">
+			<h3>입력받기</h3>
+			prompt("입력하세요", "12345") : <br>
+			pramater1 : 필수 <br>
+			pramater2 : 선택 <br>
+			리턴결과형 : String <br>
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+	</body>
+</html>

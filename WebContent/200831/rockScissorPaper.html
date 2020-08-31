@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script type="text/javascript">
+		function rockScissorPaper(){
+			player1 = prompt("첫번째 사람 가위바위보 선택해주세요");
+			
+			player2 = prompt("두 번째 사람 가위바위보 선택해주세요");
+			
+			if((player1 ==='가위' || player1 ==='바위' || player1 ==='보') && player1 === player2){
+				winner = '둘이 비겼습니다.';
+			}else if((player1 ==='가위' && player2 ==='바위'  )||( player1 ==='바위' && player2 ==='보' )|| (player1 ==='보' && player2 ==='가위')){
+				winner = 'player2  승리';
+			}else if((player1 ==='가위' && player2 ==='보') || (player1 ==='바위' && player2 ==='가위') || (player1 ==='보' && player2 ==='바위')){
+				winner = 'player1  승리';
+			}else{
+				winner = '입력값이 올바르지 않습니다.';
+			}
+			
+			
+			dom = document.querySelector('#result1');
+			dom.innerHTML = "player1 : " + player1 + '<br>'; 
+			dom.innerHTML += "player2 : " + player2 + '<br>'; 
+			dom.innerHTML += "결과 : " + winner + '<br>'; 
+				
+		}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>가위바위보</h3>
+			
+			두사람의 가위바위보를 각각 입력받는다 prompt()<br>
+			승자를 구한다
+			<input type="button" value="가위바위보" onclick = "rockScissorPaper()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script type="text/javascript">
+		function proc2(){
+			
+			vx = prompt("1번째 정수 입력");
+			vo = prompt("연산자 입력");
+			vy = prompt("2번째 정수 입력");
+			
+			result2 = document.querySelector('#result2');
+			
+			
+// 			if(vo === '+'){
+// 				result = parseInt(vx) + parseInt(vy);
+// 			}else if(vo === '-'){
+// 				result = vx - vy;
+// 			}else if(vo === '*'){
+// 				result = vx * vy;
+// 			}else if(vo === '/'){
+// 				result = vx / vy;
+// 			}
+			
+			switch(vo){
+			case '+':
+				result = parseInt(vx) + parseInt(vy);
+				break;
+			case '-':
+				result = vx - vy;
+				break;
+			case '*':
+				result = vx * vy;
+				break;
+			case '/':
+				result = vx / vy;
+				break;
+			}
+			
+		
+			result2.innerHTML = vx + " " + vo + " " + vy  + ' = ' + result;
+			
+		}
+		</script>
+	
+	</head>
+	<body>
+		<div class="box">
+			<h3>입력받기</h3>
+			정수 두개와 연산자 1개를 입력받아 연산의 결과를 출력 <br>
+			입력 : prompt(입력1) 
+			출력 : result2
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"> </div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				//date 객체 생성
+				let now = new Date();
+				
+				//document.write(now); 이방법은 doument를 다시쓰게되어서 사용하지 않음
+				
+				let vres = document.querySelector("#result1");
+				
+				vres.innerHTML = now;
+				
+			}
+			
+			function proc2(){
+				//date 객체 생성
+				let now = new Date();
+				let datetime = now.toLocaleString();
+				let date = now.toLocaleDateString();
+				let time = now.toLocaleTimeString();
+				//document.write(now); 이방법은 doument를 다시쓰게되어서 사용하지 않음
+				
+				let vres = document.querySelector("#result2");
+				//html 태그 실행함
+// 				vres.innerHTML = datetime + "<br>";
+// 				vres.innerHTML += date + "<br>";
+// 				vres.innerHTML += time + "<br>";
+				//html 태그 실행 안하고 문자 로 출력함
+				vres.textContent = datetime + "<br>";
+				vres.textContent += date + "<br>";
+				vres.textContent += time + "<br>";
+
+				
+				
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>스크립트1</h3>
+			변수선언 : var 변수명, let 변수명, const 변수명, 변수명
+			<input type="button" value="확인" onClick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		<div class="box">
+			<h3>스크립트1</h3>
+			날짜 형식 변경<br>
+			now.toLocaleString()<br>
+			now.toLocaleDateString()<br>
+			now.toLocaleTimeString()<br>
+			
+			
+			
+			<input type="button" value="확인" onClick="proc2()">
+			<div id="result2"> </div>
+		</div>
+		
+		
+	</body>
+</html>

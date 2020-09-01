@@ -155,9 +155,12 @@ body lang(en){
 	border-radius : 5px;
 	background:gray;
 	color : white;
-	width: 80px;
+	width: 100px;
 	height :30px;
 	font-size: 20px;
+}
+.button_sm{
+	font-size : 12px;
 }
 .button_mid{
 	font-size : 16px;
@@ -171,6 +174,13 @@ body lang(en){
 .container{
 	text-align: center;
 }
+.container .cart{
+	border-radius:5px;
+	display:inline-block;
+}
+.container .cart td{
+	padding : 15px;
+}
 
 .main_img img{
 	display : inline-block;
@@ -183,6 +193,8 @@ body lang(en){
 	padding : 10px;
 	display : inline-block;
 	text-align: center;
+	margin : 5px;
+	border-radius: 10px;
 }
 .item img{
 	weight:300px;

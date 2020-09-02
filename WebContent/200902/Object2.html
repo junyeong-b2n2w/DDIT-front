@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		
+		<script type="text/javascript">
+		
+		var Circle = {
+				rad: 6,
+				
+				getArea : function(){
+					return Math.PI * Math.pow(this.rad, 2);
+				},
+				getCircum : function(){
+					return Math.PI * 2 * this.rad;
+				} 
+				
+		}
+		
+		
+		function proc1(){
+			
+			Circle.name = "동그라미";
+			
+			res = "반지름 : " + Circle.rad + "<br>넓이 : " + Circle.getArea() 
+			+ "<br>둘레 : " + Circle.getCircum() + "<br>이름 : " + Circle.name;
+			
+			document.querySelector('#result1').innerHTML = res;
+		}
+		
+		
+		function Rect(width, height){
+			this.width = width;
+			this.height = height;
+			
+			this.getArea = function(){
+				return width * height;
+			}
+			this.getCircum = function(){
+				return (width + height) *2;
+			}
+			
+		}
+		
+		
+		function proc2(){
+			
+			rect = new Rect(10, 6);
+			
+			rect.name = "네모";
+			
+			res = "가로 : " + rect.width + "<br>세로 : " + rect.height + "<br>면적 : " +
+				rect.getArea() + "<br>둘레 : " +rect.getCircum() + "<br>이름 : " + rect.name;
+			
+			document.querySelector('#result2').innerHTML = res;
+		}
+		
+</script>
+		
+		
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>리터럴로 객체정의</h3>
+			Circle
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+		<div class="box">
+			<h3>생성자로 객체정의</h3>
+			Rect
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"> </div>
+		</div>
+	</body>
+</html>

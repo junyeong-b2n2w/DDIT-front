@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		
+		<script>
+		fruits1= ["사과", "메론", "참외", "수박" , "포도"];
+		fruits2= new Array("거봉", "메론" , "포도", "참외", "수박");
+		fruits3= new Array();
+		fruits3[0]="키위";
+		fruits3[1]="아보카도";
+		fruits3[2]="배";
+		fruits3[3]="감자";
+		
+		
+		
+		function proc1(){
+			print(fruits1, 'result1');
+		}
+		function proc2(){
+			print(fruits2, 'result2');
+		}
+		function proc3(){
+			print(fruits3, 'result3');
+		}
+		function print(fr , result){
+			res="";
+			for(i=0; i<fr.length; i++){
+				res += fr[i] + " ";
+			}
+			document.getElementById(result).innerHTML = res;
+		}
+		
+		
+		
+		/*
+		function proc1(){
+			//document.querySelector('#result1').innerHTML = fruits1;
+			res ="";
+			for(i=0; i<fruits1.length; i++){
+				res += fruits1[i] + " ";
+			}
+				document.querySelector('#result1').innerHTML = res;
+			
+		}
+		function proc2(){
+			res ="";
+			for(i=0; i<fruits2.length; i++){
+				res += fruits2[i];
+			}
+				document.querySelector('#result2').innerHTML = res;
+		}
+		function proc3(){
+			res ="";
+			for(i=0; i<fruits3.length; i++){
+				res += fruits3[i];
+			}
+				document.querySelector('#result3').innerHTML = res;
+		}*/
+		//-----------------------------------------------------
+		
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>array 객체</h3>
+			fruits = [" ", " ", " "]; <br>
+			fruits = new Array("","",""); <br>
+			fruits = new Array();	 <br>
+			  
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<input type="button" value="확인" onclick="proc2()">
+			<input type="button" value="확인" onclick="proc3()">
+			<div id="result1"> </div>
+			<div id="result2"> </div>
+			<div id="result3"> </div>
+		</div>
+		
+		
+	</body>
+</html>

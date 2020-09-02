@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+		function proc1(){
+			
+// 			document.querySelector('#result1').innerHTML = confirm("hihi");
+			res = "";
+			while(true){
+				su = prompt("정수입력", "1~10");
+				
+					res +="***" +su+"단 ***<br>"; 
+				for(i=1; i<10; i++){
+					res += su + " * " + i + " = " + (su*i) + "<br>";
+				}
+				document.querySelector('#result1').innerHTML = res;
+				if(!confirm("계속하시겠습니까?")){
+					break;
+				}
+			}
+// 			document.querySelector('#result1').innerHTML = res;
+
+
+		}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>confirm</h3>
+			
+			실행중 사용자의 대답 전달
+			예 / 아니오 , 계속하시겠습니까?
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+	</body>
+</html>

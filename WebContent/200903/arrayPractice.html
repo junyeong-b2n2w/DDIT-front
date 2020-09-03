@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		
+		<script type="text/javascript">
+		
+		function prac1(){
+			
+			peopleNames = new Array();
+			
+			while(true){
+				input = prompt("사람의 이름을 입력해주세요");
+				if(!input){
+					break;
+				}
+				peopleNames.push(input);
+				
+			}
+			
+			document.querySelector('#result1').innerHTML =
+				peopleNames.length == 0?"입력값이 없습니다" : "입력값  : " + peopleNames;
+			
+		}
+		
+		function prac2(){
+			numArray = new Array();
+			
+			while(true){
+				a = prompt("정수를입력하세요");
+				console.log(numArray);
+				if(numArray.indexOf(a) > -1){
+					continue;
+				}
+				numArray.push(a);
+			
+			if (numArray.length >= 5) break;
+			}
+			
+			document.querySelector('#result2').innerHTML = numArray;
+		}
+		
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>연습 1번</h3>
+			<input type="button" value="연습 1번" onclick="prac1()">
+			<div id="result1"> </div>
+		</div>
+		<div class="box">
+			<h3>연습 2번</h3>
+			<input type="button" value="확인" onclick="prac2()">
+			<div id="result2"> </div>
+		</div>
+		
+		
+	</body>
+</html>

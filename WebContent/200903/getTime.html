@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		
+		<script>
+		now = new Date();
+			function proc1(){
+				
+				myday = new Date("1994.05.12");
+				
+				
+				n1 = now.getTime();
+				n2 = myday.getTime();
+				
+				n3 = n1-n2;
+				
+				
+				
+				console.log(n1 + ", " + n2 + "," +n3);
+				
+				res = "태어난 날 : "   + myday.toDateString() + "<br>";
+				res += "경과 초 : " + n3/1000 + "<br>";
+				
+				res +=	"경과분 : " + n3 / 1000  /60  + "<br>";
+				res +="경과시 : " + n3 / 1000/60/60 + "<br>";
+				res +=	"경과일 : " + n3 / 1000/60/60/24 + "<br>";
+				res +=	"경과년  : " + n3 / 1000 /60/60/24/365 + "<br>";
+				
+				document.querySelector("#result1").innerHTML = res;
+				
+			}
+		
+			
+			function proc2(){
+				
+				inValue = new Date(document.querySelector('#inday').value);
+				
+				calcDay = (now.getTime() - inValue.getTime()) / 1000  /60 /60/24;
+				
+				if (calcDay > 30){
+					document.querySelector("#result2").innerHTML = "환불 가능일이 지났습니다.";
+				}else if(calcDay < 0){
+					
+					document.querySelector("#result2").innerHTML = "구입일이 잘못되었습니다..";
+				}
+					
+				else{
+					document.querySelector("#result2").innerHTML = "환불 가능합니다.";
+				}
+				
+				
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>경과일 구하기</h3>
+			getTime() : millisec 의 값으로 리턴된다 <br>
+			초 : millisec의 값 / 1000 <br>
+			분 : millisec의 값 / 1000  /60<br>
+			시 : millisec의 값 / 1000/60/60 <br>
+			일 : millisec의 값 / 1000/60/60/24 <br>
+			년 : millisec의 값 / 1000 /60/60/24/365<br>
+			
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+		<div class="box">
+			<h3>경과일 구하기</h3>
+			getTime() : millisec 의 값으로 리턴된다 <br>
+			
+			<input type="date" id="inday">
+			
+			
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"> </div>
+		</div>
+		
+	</body>
+</html>

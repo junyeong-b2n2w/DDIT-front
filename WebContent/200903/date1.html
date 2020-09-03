@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				n1 = new Date();
+				n2 = new Date(2000 , 03 ,12);
+				n3 = new Date("2000.03.12");
+				n4 = new Date(123450000000000);
+				
+				
+				print('result1', n1 , "new Date()");
+				print('result2', n2 , "new Date(2000 , 03 ,12)");
+				print('result3', n3 , "new Date('2000.03.12')");
+				print('result4', n4 , "new Date(123450000000000)");
+				
+			}
+		
+			
+			function print(out, n, query){
+				res1 = document.getElementById(out); 
+				res = query + "<br>";
+				res += n + "<br>";
+				res += "toLocaleString() : " +n.toLocaleString() + "<br>";
+				res += "toLocaleDateString() : " + n.toLocaleDateString() + "<br>";
+				res += "toLocaleTimeString() : " + n.toLocaleTimeString() + "<br><br><br>";
+				res1.innerHTML = res;
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>date 객체</h3>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+			<div id="result2"> </div>
+			<div id="result3"> </div>
+			<div id="result4"> </div>
+		</div>
+		
+		
+	</body>
+</html>

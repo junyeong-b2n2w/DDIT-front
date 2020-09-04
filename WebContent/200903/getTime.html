@@ -38,17 +38,20 @@
 				
 				inValue = new Date(document.querySelector('#inday').value);
 				
+				res = "구입날짜   : " + inValue.toLocaleDateString() + "<br>";
+				res += "오늘날짜 : " + now.toLocaleDateString() +  "<br>";
+				
 				calcDay = (now.getTime() - inValue.getTime()) / 1000  /60 /60/24;
 				
 				if (calcDay > 30){
-					document.querySelector("#result2").innerHTML = "환불 가능일이 지났습니다.";
+					document.querySelector("#result2").innerHTML = res+= "환불 가능일이 지났습니다.";
 				}else if(calcDay < 0){
 					
-					document.querySelector("#result2").innerHTML = "구입일이 잘못되었습니다..";
+					document.querySelector("#result2").innerHTML = res+="구입일이 잘못되었습니다..";
 				}
 					
 				else{
-					document.querySelector("#result2").innerHTML = "환불 가능합니다.";
+					document.querySelector("#result2").innerHTML = res+= "환불 가능합니다.";
 				}
 				
 				

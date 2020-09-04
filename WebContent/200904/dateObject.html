@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+		
+		
+		
+		function proc1(){
+			
+			inputDay = prompt("오늘 기준으로 알고 싶은 날짜를 입력해 보세요");
+			
+			now = new Date();
+			
+			n1 = now.getTime();
+			n2 = inputDay * 1000*60*60*24;
+			
+			n3 = n1 + n2;
+			
+			res = new Date(n1).toLocaleDateString() + "기준으로" + inputDay + "후 는 "
+			 	+ new Date(n3).toLocaleDateString() + "입니다.";
+			
+			document.querySelector('#result1').innerHTML = res;
+
+			
+			
+		}
+		
+		
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>500일 후</h3>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		
+	</body>
+</html>

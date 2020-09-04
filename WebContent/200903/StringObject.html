@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+			str="우리나라 좋은 나라 대한 민국 만세";
+			
+			function proc1(){
+				input1 = prompt("인덱스를 입력하세요.");
+				
+				output1 = str.charAt(input1);
+				
+				document.querySelector('#result1').innerHTML = output1 ? " [ "+  output1 + " ] 가 있습니다." : "해당 인덱스에 값이 존재하지 않습니다.";
+				
+				
+			}
+			
+			function proc2(){
+				a = str.slice(5, 10);
+				document.querySelector('#result2').innerHTML = " str.slice(5, 10) : " + a; 
+			}
+			function proc3(){
+				a = str.substring(11, 16);
+				document.querySelector('#result3').innerHTML = " str.substring(11, 16) : " + a; 
+			}
+			function proc4(){
+				a = str.substr(10, 5);
+				document.querySelector('#result4').innerHTML = " str.substr(10, 5) : " + a; 
+			}
+			function proc5(){
+				input = prompt("찾는 문자열 입력");
+				idx = 0;
+				res = "";
+				while(str.indexOf(input, idx) > 0){
+					
+					idx = str.indexOf(input, idx);
+					
+					res += idx + " ";
+					idx += input.length;
+				};
+				
+				document.querySelector('#result5').innerHTML = res? 
+						"찾는 문자열은 인덱스 [ " +  res + " ]에 있습니다." : "해당 문자열이 없습니다";
+				
+				
+			}
+			
+			function proc6(){
+				//공백을 기준으로 문자열을 분리한다.
+				ss = str.split(" ");
+				
+				res = "[ " ;
+				
+				ss.forEach( (s) => res+= s + " ")
+					
+				res+= "]";
+				
+				document.querySelector('#result6').innerHTML = res;
+				
+					
+			}
+			
+		
+			function proc7(){
+				idvalue = document.querySelector('#id').value;
+				namevalue = document.querySelector('#name').value;
+				
+				
+				res = "입력 한 값 : [" + idvalue.length + "]<br>";
+				res += "공백 제거한 값 : [" + idvalue.trim().length + "]<br>";
+				
+				document.querySelector('#result7').innerHTML = res;
+			}
+			
+		</script>
+	
+	
+	</head>
+	
+	
+	<body>
+		<div class="box">
+			<h3>스트링 객체</h3>
+			str="우리나라 좋은 나라 대한 민국 만세"<br>
+			charAt(index) <br>
+			slice(start, end)<br>
+			substring(start, end) <br>
+			substr (start, length) <br>
+			
+			
+			<input type="button" value="charAt" onclick="proc1()">
+			<input type="button" value="slice" onclick="proc2()">
+			<input type="button" value="substring" onclick="proc3()">
+			<input type="button" value="substr" onclick="proc4()">
+			<input type="button" value="indexOf" onclick="proc5()">
+			<div id="result1"> </div>
+			<div id="result2"> </div>
+			<div id="result3"> </div>
+			<div id="result4"> </div>
+			<div id="result5"> </div>
+		</div>
+		<div class="box">
+			<h3>split</h3>
+			<input type="button" value="확인" onclick="proc6()">
+			<div id="result6"> </div>
+		</div>
+		
+		<div class="box">
+			<h3>trim</h3>
+			trim() : 앞뒤 공백제거 <br>
+			id : <input type="text" id="id"><br>
+			pw : <input type="text" id="name"><br>
+			
+			<input type="button" value="확인" onclick="proc7()">
+			<div id="result7"> </div>
+		</div>
+		
+	</body>
+</html>

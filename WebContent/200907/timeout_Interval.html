@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<style>
+			#result2{
+				height:10px;
+				border:1px dashed white;
+			}
+		</style>
+		
+	<script>
+		function proc1(){
+			dres1 = document.querySelector('#result1');
+			
+			
+			setTimeout(()=>{
+				dres1.style.background = "red";
+			}, 1000);
+			
+		}
+		
+		function proc2(){
+			dres2 = document.querySelector('#result2');
+			
+			
+			intervalID_proc2 = setInterval(()=>{
+				dres2.style.background = 'rgb('+
+						Math.floor(Math.random()* 256)  + ',' +
+						Math.floor(Math.random() * 256) + ',' +
+						Math.floor(Math.random() * 256) + ')'
+						;
+			}, 1000);
+			
+			document.querySelector('#start').style.display ="none";
+			
+		}
+		
+		function proc3(){
+			document.querySelector('#start').style.display ="inline";
+			clearInterval(intervalID_proc2);
+			
+		}
+		
+	</script>
+	
+	</head>
+	
+	
+	<body>
+		<div class="box">
+			<h3>setTimeout</h3>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		
+		<div class="box">
+			<h3>setInterval</h3>
+			<input type="button" value="확인" id="start" onclick="proc2()">
+			<input type="button" value="종료" id="end" onclick="proc3()">
+						<div id="result2"> </div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				ul = document.querySelector("ul");
+				console.log(ul);	
+				li = ul.querySelectorAll("li");
+				res ="";
+				for(i=0; i<li.length;i++ ){
+					res += li[i].firstChild.data +"<br>";
+					console.log(li[i]);
+				}
+				
+				document.querySelector('#result1').innerHTML = res;
+			}
+			
+			function proc2() {
+				ultag = document.querySelectorAll("ul")[1];
+				console.log(ultag);	
+				litag = ultag.querySelectorAll("li");
+				
+				for(i=0; i<litag.length;i++ ){
+					img = document.createElement("img");
+					img.src ="../img/"+litag[i].firstChild.data+".jpg";
+					//img.setAttribute("src", "../img/"+litag[i].firstChild.data+".jpg");
+					img.setAttribute("width","50px");
+					
+					litag[i].appendChild(img);
+				}
+				
+			}
+		
+			function proc3(cli) {
+				console.log(cli.firstChild.data);
+				
+				img = document.createElement("img");
+				img.src ="../img/"+cli.firstChild.data+".jpg";
+				//img.setAttribute("src", "../img/"+litag[i].firstChild.data+".jpg");
+				img.setAttribute("width","50px");
+				
+				cli.appendChild(img);
+				
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="box">
+			<h3></h3>
+			<ul>
+				<li>list item1</li>
+				<li>list item2</li>
+				<li>list item3</li>
+				<li>list item4</li>
+				<li>list item5</li>
+				
+			</ul>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"> </div>
+		</div>
+		<div class="box">
+			<h3></h3>
+			<ul>
+				<li>cat</li>
+				<li>cat1</li>
+				<li>cat4</li>
+				<li>cat6</li>
+				
+			</ul>
+			<input type="button" value="확인" onclick="proc2()">
+		</div>
+		<div class="box">
+			<h3></h3>
+			<ul>
+				<li onclick="proc3(this)">cat</li>
+				<li onclick="proc3(this)">cat1</li>
+				<li onclick="proc3(this)">cat4</li>
+				<li onclick="proc3(this)">cat6</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

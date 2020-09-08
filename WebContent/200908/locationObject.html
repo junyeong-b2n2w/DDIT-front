@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+		function proc2(){
+			location.href = "/WebProject1/test.jsp";
+			
+		}
+		
+		function goPage(){
+			location.href = "/WebProject1/test.jsp?id=kk";
+		}
+		function gopagePost(){
+			document.myForm.action = "testpost.jsp";
+			document.myForm.method = "post";
+			document.myForm.submit();
+			
+			
+		}
+		
+		function goReplace(str){
+			//실행후 뒤로가기가 안된다
+			location.replace(str);
+		}
+		
+		function goReload(){
+			
+			str=["Hello", "happy", "javas","jQ","HT","CS"];
+			
+			rand = Math.floor(Math.random()* str.length);
+			document.querySelector('#result1').innerHTML = str[rand];
+			setTimeout(() =>{
+				location.reload();
+			}, 3000)
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<h3>location object</h3>
+				-자동으로 특정페이지 이동시 사용
+			<input type="button" value="page move" onclick="proc2()"><br>
+			-a 태그 이용 <a href="javascript:goPage()">공지사항 목록</a> <br>
+			
+			이벤트사용 (get) <input type="button" onclick="goPage()" value="공지사항 목록"> <br>
+			
+			이벤트사용(post)
+			<form name="myForm" action="">
+			<input type="hidden" value="korea" name="name">
+			<input type="button" onclick="gopagePost()" value="공지사항 목록"> <br>
+			</form>
+			
+			<br>
+			-새로운 문서로 대체
+			<input type="button" onclick="goReplace('/WebProject1/test.jsp')" value="공지사항목록"> <br>
+			- 현재문서를 다시 로드
+			<input type="button" value="페이지 재호출" onclick="goReload()"><br>
+			<div id="result1"></div>
+			
+		</div>
+		
+		
+	</body>
+</html>

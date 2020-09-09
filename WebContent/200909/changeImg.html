@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../css/public.css" rel="stylesheet">
+		<script>
+		
+			function proc1(){
+				vimg = document.querySelector('img');
+				
+				vsrc =vimg.src;
+				
+				if(vsrc.match("on") == null){
+					vimg.src = "../img/sw_on.png";
+				}else{
+					vimg.src = "../img/sw_off.png";
+				}
+			}
+			
+			
+			function proc2(){
+				
+				
+				
+				RCP = new Array("가위", "바위", "보");
+				
+				com = RCP[Math.floor(Math.random() * 3)];
+				
+				console.log(com);
+				
+				player1 = prompt("가위바위보를 입력해주세요.");
+				
+				player_img = document.querySelector('#player_img');
+				player_img.src = '../img/' + player1 +'_좌.PNG';
+				
+				com_img = document.querySelector('#com_img');
+				com_img.src = '../img/' + com + '_우.PNG';
+				
+				
+				if((player1 ==='가위' || player1 ==='바위' || player1 ==='보') && player1 === com){
+					winner = '둘이 비겼습니다.';
+				}else if((player1 ==='가위' && com ==='바위'  )||( player1 ==='바위' && com ==='보' )|| (player1 ==='보' && com ==='가위')){
+					winner = 'com  승리';
+				}else if((player1 ==='가위' && com ==='보') || (player1 ==='바위' && com ==='가위') || (player1 ==='보' && com ==='바위')){
+					winner = 'player1  승리';
+				}else{
+					winner = '입력값이 올바르지 않습니다.';
+				}
+				
+				
+				document.querySelector('#result').innerHTML=winner;
+			}
+		</script>
+		
+		<style>
+			.table1{
+			width:100%;
+			text-align: center;
+			
+			}
+			.userback{
+			background:white;
+			}
+			.comback{
+			background:lightgray;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h3>이밎</h3>
+			이미지으 ㅣ속성값을 기준으로 match 함수를 통해 찾음
+			<img src="../img/sw_on.png" alt="sw_on" onclick="proc1()">
+			<input type="button" value="확인">
+		</div>
+		
+		<div class="box">
+			<h3>이미지 가위바위보</h3>
+			<table class="table1">
+				<tr>
+					<td colspan="2"> <input type="button" value="게임시작" onclick="proc2()"></td>
+				</tr>
+				<tr>
+					<td class="userback">사용자</td>
+					<td class="comback">컴퓨터</td>
+				</tr>
+				<tr>
+					<td><img id="player_img"></td>
+					<td><img id="com_img"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p id="result"> </p></td>
+				</tr>
+			</table>
+			
+		</div>
+	</body>
+</html>

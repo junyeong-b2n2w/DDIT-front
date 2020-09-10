@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+      function proc1() {
+        num = document.querySelector("#num").value;
+
+        res = num + "단 입니다. <br>";
+
+        for (i = 2; i < 10; i++) {
+          res += num + " * " + i + " = " + num * i + "<br>";
+        }
+
+        document.querySelector("#result").innerHTML = res;
+      }
+    </script>
+  </head>
+  <body>
+    <select id="num">
+      <option value="2">2단</option>
+      <option value="3">3단</option>
+      <option value="4">4단</option>
+      <option value="5">5단</option>
+      <option value="6">6단</option>
+      <option value="7">7단</option>
+      <option value="8">8단</option>
+      <option value="9">9단</option>
+    </select>
+    <input type="button" value="출력하기" onclick="proc1()" />
+    <div id="result"></div>
+  </body>
+</html>

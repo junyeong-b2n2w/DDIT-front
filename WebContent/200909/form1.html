@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+        function proc1(){
+
+            input = document.querySelector("#num");
+
+            num = input.value;
+            console.log(num);
+            res = num + "단을 출력합니다. &#10;&#10;";
+
+            for(i=1; i<= 9; i++ ){
+
+                res += num + " * " + i + " = " + (num * i) + "&#10;";
+
+            }
+
+            document.querySelector("#result").innerHTML = res;
+
+        }
+
+    </script>
+  </head>
+  <body>
+    <input type="text" id="num" /> 단 <input type="button" value="출력" onclick="proc1()"/>
+    <br />
+
+   <textarea id="result"> </textarea>
+  </body>
+</html>
